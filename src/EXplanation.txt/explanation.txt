@@ -1,0 +1,15 @@
+                                       props:
+
+
+
+                                       states:     
+const [role, setRole]=useState('role')
+<input type="text" onChange={(e) => {console.log(e.target.value)
+        setRole(e.target.value);
+        }
+        }
+<Employee name="Amir" role={role} country=' algeria'/>
+
+                                      Hooks:(use...)
+
+useState is an example of hooks , there are other hooks 

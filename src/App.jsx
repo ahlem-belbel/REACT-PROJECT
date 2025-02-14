@@ -1,34 +1,47 @@
+import React from 'react'
+import Employee from './components/Employee'  //  ./ means same directory (assets)
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
 
+const App = () => {
+  
+  const showemp=true;
+  const [role, setRole]=useState('role')
+  const [name,setName]=useState('name')
+  
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>REACT COURSE </h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+   
+   
+    <div>
+     {showemp ?(   //if true
+      <>
+      <input type="text" placeholder='role' onChange={(e) => {console.log(e.target.value)
+        setRole(e.target.value); }} 
+      />
+      <input type='text'placeholder='name' onChange={ (e2) =>{
+        console.log(e2.target.value)
+        setName(e2.target.value);}}  />
+    
+     <Employee name={name} role="intern " country='algeria'/>
+     <Employee name="Nina" country='france'/>
+     <Employee name="Amir" role={role} country=' algeria'/>
+   
+     </>
+     )
+    :(  //else 
+   <p> i can not show employees</p>
+    )}
+
+ 
+
+
+</div>
+
+
+
+    
+  
+   
   )
 }
 
