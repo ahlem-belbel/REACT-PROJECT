@@ -13,3 +13,8 @@ const [role, setRole]=useState('role')
                                       Hooks:(use...)
 
 useState is an example of hooks , there are other hooks 
+
+
+                                      uuid:
+ insteag of assigning ids manually we can use guuid( universally unique identifier), for that we go on terminal and we install a package (npm install uuid)  
+ we use it as uuidv4()    after import {v4 as uuidv4}from 'uuid';                        
